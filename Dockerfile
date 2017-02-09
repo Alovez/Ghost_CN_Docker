@@ -6,17 +6,18 @@ MAINTAINER AloveZ "ruinand@live.com"
 RUN apt-get update
 RUN apt-get -y install wget
 RUN apt-get -y install unzip
+WORKDIR ~
 RUN wget https://nodejs.org/download/release/v4.2.0/node-v4.2.0.tar.gz
 RUN tar -zxvf node-v4.2.0.tar.gz
-RUN cd node-v4.2.0
+WORKDIR ~/node-v4.2.0
 RUN ./configure
 RUN make install
 RUN npm install forever -g
-RUN cd ~
+WORKDIR ~
 # get Ghost_CN
 RUN wget http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip
 RUN unzip Ghost-0.7.4-zh-full.zip -d Ghost
-RUN cd Ghost
+WORKDIR ~/Ghost
 
 # expose port
 EXPOSE 2368
