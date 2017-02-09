@@ -7,6 +7,7 @@ RUN apt-get update
 RUN apt-get -y install wget
 RUN apt-get -y install unzip
 WORKDIR ~
+RUN pwd
 RUN wget https://nodejs.org/download/release/v4.2.0/node-v4.2.0.tar.gz
 RUN tar -zxvf node-v4.2.0.tar.gz
 WORKDIR ~/node-v4.2.0
