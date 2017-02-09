@@ -6,6 +6,7 @@ MAINTAINER AloveZ "ruinand@live.com"
 RUN apt-get update
 RUN apt-get -y install wget
 RUN apt-get -y install unzip
+RUN apt-get -y install curl
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs=4.2.0
 npm install forever -g
