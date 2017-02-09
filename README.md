@@ -1,0 +1,3 @@
+# Ghost中文版Dokcer脚本
+
+基于Ubuntu14.04及Node.js-v.20的Ghost博客系统中文版Dokcer。
