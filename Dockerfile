@@ -8,11 +8,12 @@ RUN apt-get -y install wget
 RUN apt-get -y install unzip
 WORKDIR /root
 RUN pwd
-# RUN wget https://nodejs.org/download/release/v4.2.0/node-v4.2.0.tar.gz
-# RUN tar -zxvf node-v4.2.0.tar.gz
-# WORKDIR /root/node-v4.2.0
-# RUN ./configure
-# RUN make install
+RUN wget https://nodejs.org/download/release/v4.2.0/node-v4.2.0.tar.gz
+RUN tar -zxvf node-v4.2.0.tar.gz
+WORKDIR /root/node-v4.2.0
+RUN ls
+RUN ./configure
+RUN make install
 # RUN npm install forever -g
 # WORKDIR /root
 # # get Ghost_CN
