@@ -23,9 +23,9 @@ VOLUME ["/root/workspace"]
 WORKDIR /root/workspace
 
 # get Ghost_CN
-RUN wget http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip
-RUN unzip Ghost-0.7.4-zh-full.zip -d Ghost
-WORKDIR /root/workspace/Ghost
+# RUN wget http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip
+# RUN unzip Ghost-0.7.4-zh-full.zip -d Ghost
+WORKDIR /root/workspace
 
 # expose port
 EXPOSE 2368
