@@ -18,7 +18,3 @@ WORKDIR /root/node-v4.2.0
 RUN ls
 RUN ./configure
 RUN make install
-
-
-VOLUME ["/root/workspace"] 
-WORKDIR /root/workspace
