@@ -20,10 +20,11 @@ RUN ./configure
 RUN make install
 # RUN npm install forever -g
 WORKDIR /root
+VOLUME ["/root/workspace"] 
 # get Ghost_CN
-RUN wget http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip
-RUN unzip Ghost-0.7.4-zh-full.zip -d Ghost
-WORKDIR /root/Ghost
+# RUN wget http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip
+# RUN unzip Ghost-0.7.4-zh-full.zip -d Ghost
+WORKDIR /root/workspace/Ghost
 
 # expose port
 EXPOSE 2368
